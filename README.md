@@ -1,6 +1,7 @@
 # **Bike Service Application**
 
-A full-stack web application for managing bike service bookings, built with React.js and Node.js.
+ A robust full-stack bike service booking application developed using React.js for the frontend and Node.js for the backend. It streamlines the entire booking process—from service selection to confirmation—offering an intuitive interface for both customers and service providers. Built for scalability, performance, and real-time booking management.
+
 
 ---
 
