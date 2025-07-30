@@ -1,4 +1,4 @@
-# BikeServe - Bike Service Booking System
+# **Bike Service Application**
 
 A full-stack web application for managing bike service bookings, built with React.js and Node.js.
 
