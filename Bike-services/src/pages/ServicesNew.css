@@ -1,0 +1,461 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ECFAE5 0%, #DDF6D2 100%);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+.services-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 2px solid #75B364;
+  border-radius: 30px;
+  color: #4A7B3B;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  z-index: 2;
+}
+
+.home-button:hover {
+  background: linear-gradient(135deg, #75B364, #4A7B3B);
+  color: white;
+  transform: translateX(-5px);
+  box-shadow: 0 4px 6px rgba(176, 219, 156, 0.2);
+}
+
+.home-button .button-icon {
+  transition: transform 0.3s ease;
+}
+
+.home-button:hover .button-icon {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 640px) {
+  .home-button {
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50C50 77.6142 27.6142 100 0 100C-27.6142 100 -50 77.6142 -50 50C-50 22.3858 -27.6142 0 0 0C27.6142 0 50 22.3858 50 50Z' fill='%23B0DB9C' fill-opacity='0.1'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #75B364, #4A7B3B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.services-hero p {
+  font-size: 1.25rem;
+  color: #5C7355;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(176, 219, 156, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(176, 219, 156, 0.2);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(176, 219, 156, 0.2);
+  border-color: #75B364;
+}
+
+.service-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.1);
+}
+
+.service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(74, 123, 59, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-card-overlay {
+  opacity: 1;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 1.5rem;
+  margin: 0;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-list li::before {
+  content: "✓";
+  font-weight: bold;
+}
+
+.service-card-content {
+  padding: 1.5rem;
+}
+
+.service-card-content h3 {
+  color: #2C3E50;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.service-description {
+  color: #5C7355;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ECFAE5, #DDF6D2);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.service-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4A7B3B;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.service-price::before {
+  content: "₹";
+  font-size: 1rem;
+}
+
+.service-duration {
+  color: #5C7355;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.service-duration::before {
+  content: "⏱️";
+}
+
+.book-service-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #75B364, #4A7B3B);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.book-service-btn::after {
+  content: "→";
+  transition: transform 0.3s ease;
+}
+
+.book-service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(176, 219, 156, 0.2);
+}
+
+.book-service-btn:hover::after {
+  transform: translateX(4px);
+}
+
+.services-cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  margin-top: 4rem;
+}
+
+.services-cta h2 {
+  font-size: 2rem;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+}
+
+.services-cta p {
+  color: #5C7355;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #75B364, #4A7B3B);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-btn::before {
+  content: "📞";
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(176, 219, 156, 0.2);
+}
+
+@media (max-width: 768px) {
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .service-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero {
+    padding: 2rem 1rem;
+  }
+
+  .service-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .services-cta {
+    padding: 2rem 1rem;
+  }
+
+  .services-container {
+    padding: 0 1rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .cta-benefit {
+    font-size: 0.875rem;
+  }
+}
+
+/* Filter Section */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services-header {
+  margin-bottom: 3rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #75B364;
+  border-radius: 30px;
+  background: white;
+  color: #4A7B3B;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: linear-gradient(135deg, #ECFAE5, #DDF6D2);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #75B364, #4A7B3B);
+  color: white;
+  border-color: transparent;
+}
+
+/* Service Benefits */
+.service-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #5C7355;
+}
+
+.benefit-icon {
+  color: #75B364;
+}
+
+.cta-benefits {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4A7B3B;
+  font-weight: 500;
+}
+
+.cta-benefit .benefit-icon {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #75B364, #4A7B3B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

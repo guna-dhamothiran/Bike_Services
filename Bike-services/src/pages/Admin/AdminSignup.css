@@ -1,0 +1,148 @@
+/* Admin Signup Page */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.adminSignup {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #E8FFD7 0%, #ffffff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.adminSignup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3E5F44, #5E936C, #93DA97);
+}
+
+.adminSignupForm {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(62, 95, 68, 0.1);
+    text-align: center;
+    border: 1px solid rgba(147, 218, 151, 0.2);
+    backdrop-filter: blur(8px);
+    animation: formSlideUp 0.5s ease;
+}
+
+.adminSignupForm h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #3E5F44;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.adminSignupForm h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #93DA97;
+    border-radius: 2px;
+}
+
+@keyframes formSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adminSignupForm p {
+    font-family: 'Jost', sans-serif;
+    color: #4D5053;
+    margin-bottom: 15px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #CDA274;
+    border-radius: 10px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: #292F36;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #CDA274;
+    box-shadow: 0 0 8px rgba(205, 162, 116, 0.5);
+}
+
+.submitButton {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #292F36;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #CDA274;
+}
+
+.message {
+    margin-top: 10px;
+    color: #CDA274;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+}
+
+.message.error {
+    color: red;
+}
+
+.message.success {
+    color: green;
+}
+
+.redirectButton {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #F4F0EC;
+    color: #292F36;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    border: 1px solid #292F36;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.redirectButton:hover {
+    background-color: #CDA274;
+}

@@ -1,0 +1,320 @@
+/* Admin Login Page */
+.adminLogin {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0.6rem 1.2rem;
+    background: white;
+    color: #3E5F44;
+    border: 2px solid #5E936C;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.back-btn:hover {
+    background: #E8FFD7;
+    transform: translateX(-3px);
+}
+
+.loginContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-width: 1400px;
+    background: white;
+}
+
+.loginLeft {
+    flex: 1;
+    background: linear-gradient(135deg, #3E5F44 0%, #5E936C 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageSection {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.imageSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/assets/bike-service.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.imageSection h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.imageSection p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.loginRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #E8FFD7 0%, #ffffff 100%);
+}
+
+.adminLogin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3E5F44, #5E936C, #93DA97);
+}
+    /* width: 100%;
+    height: 100vh;
+    background-color: #F4F0EC; /* Light background color */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+} */ 
+
+/* .adminLoginForm {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+} */
+.adminLoginForm {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    text-align: left;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3E5F44;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.adminLoginForm h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #3E5F44;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.adminLoginForm h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #93DA97;
+    border-radius: 2px;
+}
+
+.adminLoginForm p {
+    font-family: 'Jost', sans-serif;
+    color: #4D5053;
+    margin-bottom: 15px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #5E936C;
+    border-radius: 8px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: #3E5F44;
+    background-color: rgba(232, 255, 215, 0.2);
+    transition: all 0.3s ease;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #93DA97;
+    box-shadow: 0 0 0 4px rgba(147, 218, 151, 0.2);
+    background-color: white;
+    transform: translateY(-1px);
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #3E5F44, #5E936C);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submitButton:hover {
+    background: linear-gradient(135deg, #5E936C, #3E5F44);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(62, 95, 68, 0.2);
+}
+
+.submitButton:active {
+    transform: translateY(1px);
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.message.success {
+    background-color: #E8FFD7;
+    color: #3E5F44;
+    border: 1px solid #93DA97;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.redirectButton {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #3E5F44;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #5E936C;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.redirectButton:hover {
+    background-color: #E8FFD7;
+    border-color: #93DA97;
+    transform: translateY(-1px);
+}
+
+.formFooter {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.formFooter p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .loginContainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .loginLeft {
+        height: 200px;
+    }
+
+    .imageSection h1 {
+        font-size: 2rem;
+    }
+
+    .imageSection p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginRight {
+        padding: 1.5rem;
+    }
+
+    .adminLoginForm {
+        padding: 1.5rem;
+    }
+
+    .imageSection h1 {
+        font-size: 1.75rem;
+    }
+}
