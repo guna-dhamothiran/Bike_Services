@@ -110,7 +110,7 @@ A full-stack web application for managing bike service bookings, built with Reac
 - DELETE `/api/booking/:id`: Delete booking
 
 ## Project Structure
-<img width="1366" height="768" alt="Screenshot 2025-07-30 040734" src="https://github.com/user-attachments/assets/954b139f-0dd5-48d4-88d2-598aefd71fd3" />
+<img width="238" height="614" alt="Screenshot 2025-07-30 160132" src="https://github.com/user-attachments/assets/389a5839-791d-4edd-9cfd-39d6dbe7ca18" />
 
 ## Usage Instructions
 
