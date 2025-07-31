@@ -23,7 +23,7 @@
   });
 
   app.use('/api/admin', require('./routes/adminRoutes'));
-  app.use('/api/Booking', bookingRoutes);
+  app.use('/api/booking', bookingRoutes);
 
   app.get('/', (req, res) => {
     res.send('🚀 Bike Service Booking API is running...');
