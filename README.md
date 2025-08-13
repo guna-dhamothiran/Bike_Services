@@ -60,8 +60,8 @@
    PORT=8080
    JWT_SECRET=your_jwt_secret
    ADMIN_CODE=Admin@123
-   EMAIL_USER=your_email
-   EMAIL_PASS=your_email_app_password
+   EMAIL_USER=your_email(hello@gmail.com)
+   EMAIL_PASS=your_email_app_password(Hello@123)
    ```
 
 4. Start the backend server:
