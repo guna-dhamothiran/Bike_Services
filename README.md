@@ -59,9 +59,8 @@
    MONGO_URL=your_mongodb_connection_string
    PORT=8080
    JWT_SECRET=your_jwt_secret
-   ADMIN_CODE=Admin@123
-   EMAIL_USER=your_email(hello@gmail.com)
-   EMAIL_PASS=your_email_app_password(Hello@123)
+   ADMIN_EMAIL_USER=your_email(hello@gmail.com)
+   ADMIN_EMAIL_PASS=your_email_app_password(Hello@123)
    ```
 
 4. Start the backend server:
